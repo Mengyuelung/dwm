@@ -5,6 +5,14 @@ const unsigned int interval = 1000;
 
 /* text to show if no value can be retrieved */
 static const char unknown_str[] = "n/a";
+static const char black[]="#1e222a";
+static const char green[]="#7eca9c";
+static const char white[]="#abb2bf";
+static const char grey[]="#282c34";
+static const char blue[]="#7aa2f7";
+static const char red[]="#d47d85";
+static const char darkblue[]="#668ee3";
+
 
 /* maximum output string length */
 #define MAXLEN 2048
@@ -65,9 +73,13 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ netspeed_rx,	"[%s",		     "em0" },
-	{ netspeed_tx,	"%s]",          "em0" },
-	{ cpu_perc, 	"[CPU:%s%%]",   NULL },
-	{ ram_perc, 	"[内存:%s%%]",    NULL },
-	{ datetime, 	"[时间:%s]",      "%F/%T" }
+	{ separator,	    "^c#17aa2f7^ ^b#1e222a^  ",      NULL },
+	{ kernel_release, "%s",		                          NULL },
+	{ separator,	    "^c#1e222a^ ^b#7eca9c^ CPU",      NULL },
+	{ separator,	    "^c#abb2bf^ ^b#282c34^",          NULL },
+	{ cpu_perc, 	    " %s%%",                          NULL },
+	{ separator,	    "^c#7aa2f7^ ^b#1e222a^  ",        NULL },
+	{ ram_perc, 	    "%s%%",                           NULL },
+	{ separator,	    "^c#1e222a^ ^b#7aa2f7^",          NULL },
+	{ datetime, 	    " %s ",                             "%F/%T" }
 };
