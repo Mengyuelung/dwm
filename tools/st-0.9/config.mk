@@ -1,5 +1,5 @@
 # st version
-VERSION = 0.8.5
+VERSION = 0.9
 
 # Customize below to fit your system
 
@@ -7,8 +7,8 @@ VERSION = 0.8.5
 PREFIX = /usr/local
 MANPREFIX = $(PREFIX)/share/man
 
-X11INC = /usr/local/include
-X11LIB = /usr/local/lib
+X11INC = /usr/include/X11
+X11LIB = /usr/lib64/X11
 
 PKG_CONFIG = pkg-config
 
@@ -30,6 +30,8 @@ STLDFLAGS = $(LIBS) $(LDFLAGS)
 #LIBS = -L$(X11LIB) -lm -lX11 -lutil -lXft \
 #       `$(PKG_CONFIG) --libs fontconfig` \
 #       `$(PKG_CONFIG) --libs freetype2`
+#MANPREFIX = ${PREFIX}/man
 
 # compiler and linker
 # CC = c99
+CC = gcc
