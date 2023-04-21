@@ -7,8 +7,8 @@ VERSION = 0.9
 PREFIX = /usr/local
 MANPREFIX = $(PREFIX)/share/man
 
-X11INC = /usr/include/X11
-X11LIB = /usr/lib64/X11
+X11INC = /usr/X11R6/include
+X11LIB = /usr/X11R6/lib
 
 PKG_CONFIG = pkg-config
 
@@ -34,4 +34,3 @@ STLDFLAGS = $(LIBS) $(LDFLAGS)
 
 # compiler and linker
 # CC = c99
-CC = gcc
