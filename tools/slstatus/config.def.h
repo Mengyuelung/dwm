@@ -73,10 +73,10 @@ static const char darkblue[]="#668ee3";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ separator,	    "^c#17aa2f7^ ^b#1e222a^  ",      NULL },
+	{ separator,	    "^c#17aa2f7^ ^b#1e222a^  ",      NULL },
 	{ kernel_release, "%s",		                          NULL },
 	{ separator,	    "^c#1e222a^ ^b#7eca9c^ CPU",      NULL },
-	{ separator,	    "^c#abb2bf^ ^b#282c34^",          NULL },
+//	{ separator,	    "^c#abb2bf^ ^b#282c34^",          NULL },
 	{ cpu_perc, 	    " %s%%",                          NULL },
 	{ separator,	    "^c#7aa2f7^ ^b#1e222a^  ",        NULL },
 	{ ram_perc, 	    "%s%%",                           NULL },
