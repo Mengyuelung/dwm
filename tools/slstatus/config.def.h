@@ -5,13 +5,13 @@ const unsigned int interval = 1000;
 
 /* text to show if no value can be retrieved */
 static const char unknown_str[] = "n/a";
-static const char black[]="#1e222a";
-static const char green[]="#7eca9c";
-static const char white[]="#abb2bf";
-static const char grey[]="#282c34";
-static const char blue[]="#7aa2f7";
-static const char red[]="#d47d85";
-static const char darkblue[]="#668ee3";
+#define BLACK #1e222a
+#define green #7eca9c
+#define white #abb2bf
+#define grey #282c34
+#define BLUE #7aa2f7
+#define RED #d47d85
+#define darkblue #668ee3
 
 
 /* maximum output string length */
@@ -81,6 +81,7 @@ static const struct arg args[] = {
   { vol_perc,     " 声音 %s%%",                        "/dev/mixer" },
 	{ separator,	    "^c#7aa2f7^ ^b#1e222a^  ",        NULL },
 	{ ram_perc, 	    "%s%%",                           NULL },
-	{ separator,	    "^c#1e222a^ ^b#7aa2f7^",          NULL },
+  { separator,	    "^c#1e222a^ ^b#7aa2f7^",          NULL },
+//	{ separator,	    "^cBLACK^ ^bBLUE^",          NULL },
 	{ datetime, 	    " %s ",                             "%F/%T" }
 };

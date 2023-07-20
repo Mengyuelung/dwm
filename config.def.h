@@ -89,13 +89,17 @@ static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray
 static const char *termcmd[]  = { "st", NULL };
 static const char *roficmd[] = { "rofi", "-no-lazy-grab","-show", "drun", "-modi", "drun", NULL };
 static const char *nowlock[] = { "xautolock", "-locknow", NULL };
+static const char *incrvol[] = { "mixer", "vol", "+1:+1", NULL };
+static const char *decrvol[] = { "mixer", "vol", "-1:-1", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_F5, 	   spawn,          {.v = roficmd } },
-	{ MODKEY,             		      XK_F8, 	   spawn,          {.v = nowlock } },
+	{ MODKEY,             		    XK_F8, 	   spawn,          {.v = nowlock } },
+	{ MODKEY,                       XK_F11,    spawn,           {.v = incrvol } },
+	{ MODKEY,                       XK_F12,    spawn,           {.v = decrvol } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
