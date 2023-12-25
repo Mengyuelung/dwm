@@ -7,8 +7,8 @@ VERSION = 0
 PREFIX = /usr/local
 MANPREFIX = $(PREFIX)/share/man
 
-X11INC = /usr/local/include
-X11LIB = /usr/local/lib
+X11INC = /usr/include
+X11LIB = /usr/lib
 
 # flags
 CPPFLAGS = -I$(X11INC) -D_DEFAULT_SOURCE
@@ -16,7 +16,7 @@ CFLAGS   = -std=c99 -pedantic -Wall -Wextra -Os
 LDFLAGS  = -L$(X11LIB) -s
 # OpenBSD: add -lsndio
 # FreeBSD: add -lkvm
-LDLIBS   = -lX11 -lkvm
+LDLIBS   = -lX11
 
 # compiler and linker
 CC = cc
